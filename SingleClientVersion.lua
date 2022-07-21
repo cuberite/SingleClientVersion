@@ -10,11 +10,7 @@
 --- The only allowed client version number
 local g_AllowedVersion
 
-
-
-
-
---- Maps version name ("1.7.10") to version number (5)
+--- Maps version name ("1.8") to version number (47)
 local g_VersionMap =
 {
 	["1.8"]    = 47,
@@ -67,7 +63,7 @@ function Initialize(a_Plugin)
 	-- Load the single allowed version from the config file:
 	local ini = cIniFile:new()
 	ini:ReadFile("SingleClientVersion.ini")
-	local version = ini:GetValueSet("SingleVersion", "AllowedVersion", "1.7.2")
+	local version = ini:GetValueSet("SingleVersion", "AllowedVersion", "1.8")
 	if (version:match(".*\..*")) then  -- if there's a dot in the string
 		g_AllowedVersion = g_VersionMap[version]
 	else
