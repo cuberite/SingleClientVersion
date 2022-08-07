@@ -10,6 +10,10 @@
 --- The only allowed client version number
 local g_AllowedVersion
 
+
+
+
+
 --- Maps version name ("1.8") to version number (47)
 local g_VersionMap =
 {
